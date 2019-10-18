@@ -1,0 +1,148 @@
+
+#login a{
+	border: 1.5px solid rgba(255, 255, 122, 0.87);
+	border-radius: 10px;
+	text-decoration: none;
+}
+#login a:hover{
+	background-color: rgba(255, 255, 122, 0.87);
+}
+#nav a{
+	text-decoration: none;
+	color: black;
+	font-weight: 600;
+}
+#box2{
+	height: 500px;
+	width: 100%;
+	background-image: url(images/banner_2.png);
+	margin-top: 5%;
+	overflow: hidden;
+}
+#box{
+	width: 42%;
+	height: 400px;
+	margin-right: 30px;
+	margin-top: 50px;
+	float: right;
+	display:inline-block;
+	background-color: rgba(36, 36, 36, 0.79);
+	border-radius: 10px;
+
+}
+.h4{
+	margin-left: 20px;
+	padding: 15px;
+	color: white;
+}
+.custom-control{
+	margin-left: 30px;
+	margin-bottom: 80px;
+	color: white;
+
+}
+.form-row{
+	padding: 15px;
+	margin-top: -68px;
+	color: white;
+
+
+}
+#form-second{
+	padding: 10px;
+	margin-top: -20px;
+}
+#bttn{
+	background-color: rgba(72, 120, 250, 0.69);
+	border: none;
+	font-size: 15sp;
+	float: right;
+	margin-right: 30px;
+}
+#box3{
+	width: 100%;
+	height: 300px;
+}
+#box3 .h6 {
+	margin-top: 16%;
+	margin-left: 3%;
+	text-decoration: none;
+	color: black;
+}
+#box3 span{
+	float: right;
+	margin-top: -3%;
+	margin-right: 10%;
+}
+#box3 img:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#nav a:hover{
+	color: rgba(124, 124, 124, 0.836);
+}
+#bttn:hover{
+	text-decoration-style: solid;
+}
+#box4{
+	height: 200px;
+	width: 100%;
+}
+#box4 a:hover{
+	text-decoration: none;
+}
+#footer{
+    border-top: 1px solid black;
+	}
+#copyright{
+    margin-top: 8%;
+    position: absolute;
+	font-family: sans-serif;
+	left: 20px;
+}
+#footercontainer{
+	display: block;
+	font-family: Adobe Heiti Std;
+	float: right;
+	margin-right: 20px;
+	margin-top: 20px;
+}
+#footercontainer a{
+	text-decoration: none;
+	color: black;
+	font-weight: 100;
+}
+#footercontainer a:hover{
+	color: blue;
+}
+#footercontainer_two{
+	display: block;
+	font-family: Adobe Heiti Std;
+	float: right;
+	margin-right: 70px;
+	margin-top: 20px;
+}
+#footercontainer_two a{
+	text-decoration: none;
+	color: black;
+	font-weight: 100;
+}
+#footercontainer_two a:hover{
+	color: blue;
+}
+#d{
+	height: 280px;
+	width: 100%;
+	margin-top: 75px;;
+}
+.table-responsive-sm{
+	margin-left: 90px;
+	margin-right: 90px;
+}
+.r{
+	margin: 10%;
+}
+
+
+
+
+
