@@ -16,7 +16,7 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="ism/css/my-slider.css"/>
     <script src="ism/js/ism-2.2.min.js"></script>
-    <title>Jet Airways| Book Tickets</title>
+    <title>Jet Airways| Login</title>
 </head>
 <body>
 	
@@ -43,18 +43,18 @@
 	
 <div id="d" style="width: 30%; margin-left: 30%; margin-top: 10%;">
     <p class="h3">SignUp</p>
-        <form > 
+    <form action="register" method="POST"> 
             <div class="form-group">
                 <label for="exampleInputEmail1">Username</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" " placeholder="Enter Username" required>
+                <input type="text" name="personName" class="form-control" id="exampleInputEmail1" " placeholder="Enter Username" required>
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                <input type="email"  name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
             </div>
                 <button type="submit" style="float: right; width: 120px;" class="btn btn-primary">Register</button><br><br><br>
                 <a href="Login.jsp"><p class="h9" style="margin-left: 80px;">Already Have Account? Login </p></a>

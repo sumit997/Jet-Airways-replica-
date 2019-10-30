@@ -13,7 +13,7 @@ public class Controller {
       try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
             Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "hr","hr");
-            PreparedStatement ps = con.prepareStatement("select USER_EMAIL,USER_PASSWORD from user_detail where USER_NAME=? and USER_PASSWORD=?");
+            PreparedStatement ps = con.prepareStatement("select USER_NAME,USER_PASSWORD from user_detail where USER_NAME=? and USER_PASSWORD=?");
             ps.setString(1, name);
             ps.setString(2, password);
             ResultSet rs = ps.executeQuery();
@@ -27,30 +27,27 @@ public class Controller {
       return false;
     }
     
-   
-    public void logic(){
-        try {
+   public boolean AdminCheck(String name, String password){
+       
+       try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
             Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "hr","hr");
-            PreparedStatement ps = con.prepareStatement("select * from INDIAN_FLIGHTS");
+            PreparedStatement ps = con.prepareStatement("select USER_NAME,PASSWORD from Admin where USER_NAME=? and PASSWORD=?");
+            ps.setString(1, name);
+            ps.setString(2, password);
             ResultSet rs = ps.executeQuery();
-            while(rs.next()) {
-                 System.out.println(rs.getString(1));
-                 System.out.println(rs.getString(2));
-                 System.out.println(rs.getString(3));
-                 System.out.println(rs.getString(4));
-                  System.out.println(rs.getString(5));
-                   System.out.println(rs.getString(6));
-                    System.out.println(rs.getString(7));
-                     System.out.println(rs.getString(8));
-                   System.out.println(rs.getString(9));
-          }
-           
-        } catch (Exception e) {
-            System.out.println(e);
+            if (rs.next()) {
+              return true;
+            }
+       }
+            catch (Exception e) {
+                    System.out.println(e);
         }
-    }
+       return false;
+       }
+   }
+    
     
    
-}
+
 

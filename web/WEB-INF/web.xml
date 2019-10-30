@@ -28,6 +28,18 @@
         <servlet-name>Product_Details</servlet-name>
         <servlet-class>Product_Details</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>add</servlet-name>
+        <servlet-class>add</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Admin</servlet-name>
+        <servlet-class>Admin</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddPassenger</servlet-name>
+        <servlet-class>AddPassenger</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>register</servlet-name>
         <url-pattern>/register</url-pattern>
@@ -55,6 +67,18 @@
     <servlet-mapping>
         <servlet-name>Product_Details</servlet-name>
         <url-pattern>/Product_Details</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>add</servlet-name>
+        <url-pattern>/add</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Admin</servlet-name>
+        <url-pattern>/Admin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddPassenger</servlet-name>
+        <url-pattern>/AddPassenger</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

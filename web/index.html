@@ -50,40 +50,28 @@
         <div class="form-row">
           <div class="col-md-6 mb-4">
             <label for="validationDefault01">Flight Origin</label>
-            <input type="text" name="origin" class="form-control" id="validationDefault01" list="data" placeholder="Mumbai(BOM)"  required>
-            <datalist id="data">
-              <option value="Mumbai(BOM)">
-              <option value="Lucknow(LKO)">
-              <option value="Jaipur(JAI)">
-              <option value="Jhodpur(JDH)">
-              <option value="Delhi(DEL)">              
-            </datalist>
+            <input type="text" name="origin" class="form-control" placeholder="Mumbai(BOM)"  required>
+            
           </div> 
           <div class="col-md-6 mb-4">
             <label for="validationDefault02">Flight Destiation</label>
-            <input type="text" class="form-control" name="des" id="validationDefault02" list="data" placeholder="Lucknow(LKO)" required>
-            <datalist id="data">
-                <option value="Mumbai(BOM)">
-                <option value="Lucknow(LKO)">
-                <option value="Jaipur(JAI)">
-                <option value="Jhodpur(JDH)">
-                <option value="Delhi(DEL)">              
-              </datalist>
+            <input type="text" class="form-control" name="des"  placeholder="Lucknow(LKO)" required>
+            
           </div>
          
         </div>
         <div class="form-row" id="form-second">
           <div class="col-md-5 mb-3">
             <label for="validationDefault03">Departure Date</label>
-            <input type="date" class="form-control" id="validationDefault03"  required>
+            <input type="date"  name="dep_date" class="form-control" id="validationDefault03"  required>
           </div>
           <div class="col-md-4 mb-3">
             <label for="validationDefault04" id="title">Return Date</label>
-            <input type="Date" class="form-control" id="validationDefault04"  required>
+            <input type="Date" name="re_date" class="form-control" id="validationDefault04" >
           </div>
           <div class="col-md-3 mb-3">
             <label for="validationDefault05" id="title_pass">No Passenger</label>
-            <input type="number" max="6" min="1" class="form-control"  value="1" id="validationDefault05" required>
+            <input type="number" name="passenger" max="6" min="1" class="form-control"  value="1" id="validationDefault05" required>
           </div>
         </div>
         <button class="btn btn-success" id="bttn" type="submit">Search Flight &rarr;</button>

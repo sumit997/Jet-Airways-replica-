@@ -43,19 +43,20 @@
 	
 <div id="d" style="width: 30%; margin-left: 30%; margin-top: 10%;">
     <p class="h3">Login</p>
-        <form > 
+    <form action="login" method="POST"> 
             <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                <label for="exampleInputEmail1">Enter Username</label>
+                <input type="text"  name="name" class="form-control" placeholder="Enter Username" required>
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                <input type="password" name="pass" class="form-control" placeholder="Password" required>
             </div>
                 <button type="submit" style="float: right; width: 120px;" class="btn btn-primary">Login</button><br><br><br>
                 <a href="RegisterUser.jsp"><p class="h9" style="margin-left: 80px;">Don't Have Account? Register Here</p></a>
         </form>
  </div> 
+    <p class="h9" style="margin-left: 30%; margin-top: 4%; "><a href="Admin.jsp">Admin Login</a></p>
  
      
  

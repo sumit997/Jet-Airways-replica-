@@ -1,3 +1,4 @@
+<%@page import="java.sql.ResultSet"%>
 <%@ page import="java.util.*" %>
 <%@ page import="java.security.*" %>
 
@@ -165,47 +166,45 @@ function submitPayuForm() {
             }
         %>
 
-<form action="<%= action1 %>" method="post" name="payuForm">
-<input type="hidden" name="key" value="<%= merchant_key %>" />
-      <input type="hidden" name="hash" value="<%= hash %>"/>
-      <input type="hidden" name="txnid" value="<%= txnid %>" />
-      <input type="hidden" name="udf2" value="<%= txnid %>" />
-	  <input type="hidden" name="service_provider" value="payu_paisa" />
-      <table>
+         <% 
+             
+               
+                    String sucessUrl = "http://localhost:32635/Jet-Airways-replica-/Final_Summarry.jsp";
+                    String failurUrl= "http://localhost:32635/Jet-Airways-replica-/Payment_Page.jsp";
+                  %>
+<form action="myServlet"  name="payuform" method=POST >
+<input type="hidden" name="key"value="UFu3ed" />
+<input type="hidden" name="hash_string" value="" />
+<input type="hidden" name="hash" />
+<input type="hidden" name="txnid"/>
+    <table>
+       
         <tr>
-          <td><b>Mandatory Parameters</b></td>
+        <td>Amount: </td>
+        <td><input name="amount" type="hidden" value="<%=economySeat %>"  /></td>
+        <td>First Name: </td>
+        <td><input name="firstname" id="firstname"  /></td>
         </tr>
         <tr>
-          <td>Amount: </td>
-          <td><input name="amount" value="<%= (empty(params.get("amount"))) ? "" : params.get("amount") %>" /></td>
-          <td>First Name: </td>
-          <td><input name="firstname" id="firstname" value="<%= (empty(params.get("firstname"))) ? "" : params.get("firstname") %>" /></td>
+        <td>Email: </td>
+        <td><input name="email" id="email"   /></td>
+        <td>Phone: </td>
+        <td><input name="phone"  /></td>
+        </tr>
+        
+        <tr>
+        <td>Success URI: </td>
+        <td colspan="3"><input name="surl" type="hidden" value="<% out.print(sucessUrl); %>" size="64"  /></td>
         </tr>
         <tr>
-          <td>Email: </td>
-          <td><input name="email" id="email" value="<%= (empty(params.get("email"))) ? "" : params.get("email") %>" /></td>
-          <td>Phone: </td>
-          <td><input name="phone" value="<%= (empty(params.get("phone"))) ? "" : params.get("phone") %>" /></td>
+        <td>Failure URI: </td>
+        <td colspan="3"><input name="furl" type="hidden" value="<% out.print(failurUrl); %>" size="64" /></td>
         </tr>
+        
         <tr>
-          <td>Product Info: </td>
-          <td colspan="3"><input name="productinfo" value="<%= (empty(params.get("productinfo"))) ? "" : params.get("productinfo") %>" size="64" /></td>
         </tr>
-        <tr>
-          <td>Success URI: </td>
-          <td colspan="3"><input name="surl" value="<%= (empty(params.get("surl"))) ? "" : params.get("surl") %>" size="64" /></td>
-        </tr>
-        <tr>
-          <td>Failure URI: </td>
-          <td colspan="3"><input name="furl" value="<%= (empty(params.get("furl"))) ? "" : params.get("furl") %>" size="64" /></td>
-        </tr>
-        <tr>
-          <% if(empty(hash)){ %>
-          <input  id="pay" type="submit" value="Submit" />
-          <% } %>
-        </tr>
-      </table>
-    </form>
+    </table>
+</form>
 
 
 </body>

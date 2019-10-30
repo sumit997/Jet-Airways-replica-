@@ -39,10 +39,5 @@ public class login extends HttpServlet {
             response.sendRedirect("Login.jsp");
             
         }
-     
-    
-      
     }
-
-  
 }
