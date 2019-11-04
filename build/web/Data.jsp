@@ -4,6 +4,7 @@
     Author     : HP
 --%>
 
+<%@page import="java.io.PrintWriter"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Connection"%>
@@ -156,6 +157,11 @@
     </style>
  </head>
 <body>
+    <%
+         
+       
+
+        %>
 	
 	<nav class="navbar fixed-top navbar-light bg-light">
   <h3 class="navbar-text">	
@@ -190,9 +196,7 @@
                     <li class="nav-item" style="margin-top: 25px;">
                       <p class="h6">${passengers} Passenger</a>
                     </li>
-                    <li class="nav-item" style="margin-top: 25px;">
-                        <a class="h6" id="priceupdate"> ${re_date}</p>
-                    </li>
+                    
             </ul>
     </div>
     
@@ -206,11 +210,16 @@
         </div>
     </div>
     <% 
+        
             String origin = request.getParameter("origin");
             String des = request.getParameter("des");
             String from_date = request.getParameter("dep_date");
             String re_date = request.getParameter("re_date");
             String passengers = request.getParameter("passenger");
+            
+            
+            
+            
             
             HttpSession s = request.getSession();
             s.setAttribute("origin", origin);
@@ -220,6 +229,7 @@
             s.setAttribute("passengers", passengers);
             
             String plane = request.getParameter("timing");
+            
             
         try{
             Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -276,14 +286,17 @@
 		</div>
             </div>
             
+                    
                 
-            <%}
             
-            ps.close();
+                        <%  } 
+            
+             ps.close();
             con.close();
         }catch(Exception e){
             System.out.println(e);
         }
+        
         %>
 
        
@@ -307,8 +320,8 @@
       
     </div>
       
-    <script type="text/javascript">
-            
+        <script type="text/jquery">
+            $('.alert').alert()
         </script>
         
 </body>

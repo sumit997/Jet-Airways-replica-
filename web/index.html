@@ -11,6 +11,22 @@
     <script src="ism/js/ism-2.2.min.js"></script>
     <title>Jet Airways| Book Tickets</title>
 </head>
+<script type="text/javascript">
+        function check(){
+            var depDate = document.myform.dep_date.value;
+            var reDate = document.myform.re_date.value;
+            
+            if (depDate == reDate) {
+                    alert("Return Date Must be Greater than Departure Date");
+                    return false;
+            }else if(reDate < depDate){
+                alert("Return Date Must be Greater than Departure Date");
+                return false;
+            }
+            
+              
+        }
+    </script>
 <body>
 	
 	<nav class="navbar fixed-top navbar-light bg-light">
@@ -46,7 +62,7 @@
             <label class="custom-control-label" for="customRadioInline2">Two Way</label>
           </div>
           
-          <form action="Data.jsp" method="POST">
+          <form name="myform" action="Data.jsp" method="POST" onsubmit="return check()">
         <div class="form-row">
           <div class="col-md-6 mb-4">
             <label for="validationDefault01">Flight Origin</label>
@@ -74,7 +90,7 @@
             <input type="number" name="passenger" max="6" min="1" class="form-control"  value="1" id="validationDefault05" required>
           </div>
         </div>
-        <button class="btn btn-success" id="bttn" type="submit">Search Flight &rarr;</button>
+              <button class="btn btn-success" id="bttn" type="submit" >Search Flight &rarr;</button>
       </form>
         </div>
   </div>

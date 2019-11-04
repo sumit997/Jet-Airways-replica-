@@ -17,6 +17,17 @@
     <link rel="stylesheet" href="ism/css/my-slider.css"/>
     <script src="ism/js/ism-2.2.min.js"></script>
     <title>Jet Airways| Book Tickets</title>
+    <script type="text/javascript">
+        function check(){
+            var depDate = document.myform.dep_date.value;
+            var reDate = document.myform.re_date.value;
+            
+            if (depDate == reDate) {
+                    alert("Return Date Must be Greater than Departure Date");
+                    return false;
+                }
+        }
+    </script>
 </head>
 <body>
      <%
@@ -27,6 +38,7 @@
             if(session.getAttribute("name")==null){
                 response.sendRedirect("Login.jsp");
             }
+            
         %>
 	
 	<nav class="navbar fixed-top navbar-light bg-light">
@@ -62,7 +74,7 @@
             <label class="custom-control-label" for="customRadioInline2">Two Way</label>
           </div>
           
-          <form action="Data.jsp" method="POST">
+          <form action="Data.jsp" method="POST" name="myform" onsubmit="return check()">
         <div class="form-row">
           <div class="col-md-6 mb-4">
             <label for="validationDefault01">Flight Origin</label>
